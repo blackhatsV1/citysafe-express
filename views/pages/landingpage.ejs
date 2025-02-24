@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/headlanding'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>Welcome to CitySafe</h1>
+    <p>This where you will see your newsfeed.</p>
+
+    <h4 class="mb-5">Please <a href="/login">Login</a> to experience full feature. </h4>
+    <div class="container"> <p>You are currently here: </p> <%- include('../partials/selectloc'); %></div>
+  </div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

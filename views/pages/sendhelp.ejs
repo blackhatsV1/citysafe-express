@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="jumbotron">
+      <h1>Select recipients location</h1>
+      <div>
+        <%- include('../partials/selectloc'); %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="well">
+      <h3 class="mb-3">Send Your Help</h3>
+
+      <form action="/postrequest" method="POST">
+        
+        <input class="form-control mb-3" type="text" name="name" placeholder="What's his/her Name" required>
+
+        <input class="form-control mb-3" type="text" name="location" placeholder="What's his/her Location" required>
+
+        <textarea class="form-control mb-3" name="request" placeholder="Their need" required></textarea>
+
+        <button class="btn btn-primary mb-3" type="submit">Send Help</button>
+    </form>
+    
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

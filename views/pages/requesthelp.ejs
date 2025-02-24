@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="jumbotron">
+      <h1>Your current Location:</h1>
+      <div>
+        <%- include('../partials/selectloc'); %>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="col-sm-4">
+    <div class="well">
+
+      <h3 class="mb-3">Request for Help</h3>
+
+      <form action="/postrequest" method="POST">
+        <label class="form-label mb-1">Your Name:</label>
+        <input class="form-control mb-3" type="text" name="name" placeholder="Your Name" required>
+
+        <label class="form-label mb-1">Your Location:</label>
+        <textarea class="form-control mb-3" name="location" placeholder="Your Location" readonly required></textarea>
+
+        <label class="form-label mb-1">Your Needs:</label>
+        <textarea class="form-control mb-3" name="needs" placeholder="Describe your need" required></textarea>
+
+        <button class="btn btn-primary mb-3" type="submit">Post Request</button>
+    </form>
+
+    
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
